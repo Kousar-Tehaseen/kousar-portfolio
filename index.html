@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kousar Tehaseen | AI/ML Engineer & Python Developer</title>
+    <meta name="description"
+        content="Portfolio of Kousar Tehaseen, an aspiring AI/ML Engineer and Python Developer specializing in Computer Science and Artificial Intelligence.">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Kousar Tehaseen - Portfolio">
+    <meta property="og:description" content="Aspiring AI/ML Engineer & Python Developer | B.Tech CSE & AI Graduate">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome 6 for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Modern Design System & Variables */
+        :root {
+            --primary: #6366f1;
+            --primary-hover: #4f46e5;
+            --bg-main: #0b0f19;
+            --bg-card: #151c2c;
+            --bg-card-hover: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+            --gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header & Navbar */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(11, 15, 25, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 75px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .nav-contact-btn {
+            background: var(--gradient);
+            color: #fff !important;
+            padding: 0.6rem 1.4rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+        }
+
+        .nav-contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 11rem 0 6rem;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(99, 102, 241, 0.1);
+            color: #818cf8;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .hero-description {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.8rem 1.6rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-socials {
+            display: flex;
+            gap: 1.2rem;
+        }
+
+        .hero-socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .hero-socials a:hover {
+            color: #fff;
+            background: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .avatar-box {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            border-radius: 30px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+        }
+
+        .avatar-box i {
+            font-size: 8rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Sections */
+        .section {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 3.5rem;
+            font-size: 1rem;
+        }
+
+        /* Cards Layout */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Skill Pills */
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 0.4rem 0.9rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-tag i {
+            color: var(--primary);
+        }
+
+        /* Project Cards */
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-badge {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            margin: 1rem 0 0.8rem;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--bg-card);
+            padding: 1rem 1.2rem;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .contact-item i {
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .contact-item a {
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 968px) {
+
+            .hero-container,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- A. Navbar -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">Kousar<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active"><i class="fas fa-house"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#skills"><i class="fas fa-code-branch"></i> Skills</a></li>
+                <li><a href="#projects"><i class="fas fa-folder-open"></i> Projects</a></li>
+                <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#contact" class="nav-contact-btn"><i class="fas fa-paper-plane"></i> Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- B. Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-badge"><i class="fas fa-wand-magic-sparkles"></i> Hello, World! I'm</span>
+                <h1 class="hero-title">Kousar Tehaseen</h1>
+                <h2 class="hero-subtitle">Aspiring <span>AI/ML Engineer</span> | Python Developer</h2>
+                <p class="hero-description">
+                    A Computer Science and Artificial Intelligence fresher passionate about building intelligent
+                    systems, optimizing data-driven solutions, and writing clean, scalable Python code.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary"><i class="fas fa-laptop-code"></i> View Projects</a>
+                    <a href="#resume" class="btn btn-secondary"><i class="fas fa-file-arrow-down"></i> Download
+                        Resume</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/placeholder-github" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/placeholder-linkedin" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:placeholder@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="avatar-box">
+                    <i class="fas fa-user-astronaut"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- C. About Me -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-circle-info" style="color:var(--primary);"></i> About Me</h2>
+            <p class="section-subtitle">Get to know my background and technical passion</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Academic Background</h3>
+                    <p>B.Tech in Computer Science and Artificial Intelligence (Graduating 2026), providing a robust
+                        foundation in computing, algorithms, and AI principles.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI & ML Passion</h3>
+                    <p>Deeply fascinated by artificial intelligence and machine learning. Focused on using neural
+                        networks and predictive models to solve real-world problems.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Ready to Contribute</h3>
+                    <p>As an entry-level professional, I am eager to join dynamic engineering teams, write maintainable
+                        code, and expand my technical capabilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- D. Skills -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-screwdriver-wrench" style="color:var(--primary);"></i> Technical
+                Skills</h2>
+            <p class="section-subtitle">Technologies and toolkits I specialize in</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon"><i class="fab fa-python"></i></div>
+                    <h3>Languages & Core</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-robot"></i></div>
+                    <h3>AI & Data Science</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-network-wired"></i> Machine Learning</span>
+                        <span class="skill-tag"><i class="fas fa-brain"></i> Deep Learning</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Web Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-database"></i></div>
+                    <h3>Database & Network</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-server"></i> SQL</span>
+                        <span class="skill-tag"><i class="fas fa-network-wired"></i> Networking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- E. Featured Project -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-diagram-project" style="color:var(--primary);"></i> Featured
+                Project</h2>
+            <p class="section-subtitle">Showcasing research and technical implementation</p>
+
+            <div class="project-card">
+                <div>
+                    <span class="project-badge"><i class="fas fa-microchip"></i> AI / ML Research</span>
+                    <h3 class="project-title">AI-Driven Adaptive Energy Optimization & Management in Smart Microgrids
+                        Using GANs</h3>
+                    <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 1.5rem;">
+                        An intelligent framework designed to support energy prediction and optimization in smart
+                        microgrids.
+                        Accounts for variable renewable energy sources, demand fluctuations, and battery storage
+                        dynamics using Generative Adversarial Networks (GANs).
+                    </p>
+                </div>
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 1.2rem;">
+                    <div class="skill-tags" style="margin-top:0;">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">GANs</span>
+                        <span class="skill-tag">Machine Learning</span>
+                    </div>
+                    <a href="https://github.com/placeholder-github" target="_blank" class="btn btn-primary btn-sm"><i
+                            class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- F. Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-envelope-open-text" style="color:var(--primary);"></i> Get In
+                Touch</h2>
+            <p class="section-subtitle">Feel free to reach out for opportunities or collaborations</p>
+
+            <div class="contact-grid">
+                <div>
+                    <h3>Contact Information</h3>
+                    <p style="color:var(--text-muted); margin-top:0.5rem;">Let's connect on social media or reach out
+                        directly via email.</p>
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <small style="color:var(--text-muted); display:block;">Email</small>
+                                <a href="mailto:placeholder@email.com">placeholder@email.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <small style="color:var(--text-muted); display:block;">LinkedIn</small>
+                                <a href="https://linkedin.com/in/placeholder-linkedin"
+                                    target="_blank">linkedin.com/in/placeholder-linkedin</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <small style="color:var(--text-muted); display:block;">GitHub</small>
+                                <a href="https://github.com/placeholder-github"
+                                    target="_blank">github.com/placeholder-github</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form
+                    style="background:var(--bg-card); border:1px solid var(--border); padding:2rem; border-radius:12px;">
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                    <input type="email" class="form-control" placeholder="Your Email" required>
+                    <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;"><i
+                            class="fas fa-paper-plane"></i> Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- G. Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Kousar Tehaseen. Built with HTML, CSS & Font Awesome Icons.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
